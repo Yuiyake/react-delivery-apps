@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+img {
+    /*解决边框下边多一个地方*/
+    vertical-align: middle;
+}
