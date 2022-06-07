@@ -14,7 +14,7 @@
     width: 40rem;
     height: 36rem;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 28rem;
     padding: 0;
 }
 .Sub {
@@ -22,6 +22,6 @@
     border: 1px solid black;
 }
 .count {
-    font-size: 16px;
+    font-size: 3rem2;
     margin: 0 5px;
 }

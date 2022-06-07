@@ -13,15 +13,18 @@ img {
 }
 .Title {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 36rem;
     margin: 0;
 }
 .Desc {
     /*width: 98%;*/
     color: #bbb;
     margin: 0;
-    font-size: 12px;
+    font-size: 24rem;
     padding-right: 40rem;
+}
+.DescBox {
+    flex: auto;
 }
 .PriceWrap {
     display: flex;
@@ -31,9 +34,9 @@ img {
 }
 .Price {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 36rem;
 }
 .Price::before {
     content: '￥';
-    font-size: 13px;
+    font-size: 26rem;
 }

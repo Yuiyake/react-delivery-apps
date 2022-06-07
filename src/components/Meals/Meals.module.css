@@ -1,7 +1,8 @@
 .Meals {
     /* 设置滚动条给Meals */
     position: absolute;
-    top: 100rem;
+    top: 120rem;
     bottom: 0;
     overflow: auto;
+    padding-bottom: 120rem;
 }

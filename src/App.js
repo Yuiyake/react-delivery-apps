@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Meals from "./components/Meals/Meals";
 import CartContext from "./store/cart-context";
 import FilterMeals from "./components/FilterMeals/FilterMeals";
+import Cart from "./components/Cart/Cart";
+// import BackDrop from "./components/UI/BackDrop/BackDrop";
 
 // mock
 const MEALS_DATA = [
@@ -98,12 +100,21 @@ const App = () => {
         setCartData(newCart)
     }
 
+    // 创建过滤meals的函数
+    const filterHandler = (keyword) => {
+        // 判断当前meals里有没有keyword这个数据，有就返回
+        const newMealsData = MEALS_DATA.filter(item => item.title.indexOf(keyword) !== -1)
+        setMealsData(newMealsData)
+    }
+
     // 作为一个空父容器，不会生成实际dom。因为jsx定义内容必须被父容器包裹在内，但我们又不希望父容器在网页中产生多余结构，所以产生了这个。
     return (
         <CartContext.Provider value={{...cartData, addItem, removeItem}}>
             <div>
-                <FilterMeals></FilterMeals>
+                <FilterMeals onFilter={filterHandler}></FilterMeals>
                 <Meals mealsData={mealsData}></Meals>
+                <Cart></Cart>
+                {/*<BackDrop></BackDrop>*/}
             </div>
         </CartContext.Provider>
 
